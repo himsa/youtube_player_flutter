@@ -96,11 +96,17 @@ class _PlayPauseButtonState extends State<PlayPauseButton>
           child: InkWell(
             borderRadius: BorderRadius.circular(50.0),
             onTap: () => _togglePlayPause(state),
-            child: AnimatedIcon(
-              icon: AnimatedIcons.play_pause,
-              progress: _animController.view,
-              color: Colors.white,
-              size: 60.0,
+            child: Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.black.withValues(alpha: 0.5),
+              ),
+              child: AnimatedIcon(
+                icon: AnimatedIcons.play_pause,
+                progress: _animController.view,
+                color: Colors.white,
+                size: 60.0,
+              ),
             ),
           ),
         ),
